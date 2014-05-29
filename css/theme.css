@@ -1,0 +1,66 @@
+/************GLOBAL***************/
+
+body{
+  margin:0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+html{
+  background: url(../images/bg1.jpg) no-repeat center center fixed;
+  -webkit-background-size:cover !important;
+  -moz-background-size:cover !important;
+  -o-background-size:cover !important;
+  background-size:cover !important;
+}
+
+.preload *{
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition:none !important;
+}
+
+.transition *{
+  -webkit-transition:all .5s ease !important;
+  -moz-transition:all .5s ease !important;
+  -ms-transition:all .5s ease !important;
+  -o-transition:all .5s ease !important;
+  transition:all .5s ease !important;
+}
+
+/************HEADER*************/
+
+.transition-label{
+}
+
+.header{
+  width:100%;
+  height:100px;
+  margin:20px 0 0 0;
+  padding:0;
+}
+
+.header-logo-container{
+  margin-left:30px;
+}
+
+.header-logo-text{
+
+  margin:0;
+  font-size:4em;
+  cursor:pointer;
+}
+
+.header-logo-text:hover{
+  margin-left:20px;
+  color:#585858;
+  opacity:.5;
+}
+
+/*********MAIN CONTAINER*********/
+
+.main-container{
+
+}
