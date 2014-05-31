@@ -3,24 +3,24 @@
   <head>
     <title>Liucode</title>
     <meta charset="utf-8">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="javascript" type="text/javascript" href="js/index.js">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/index.js" type="text/javascript"></script>
   </head>
   <body class="preload">
 
     <!-- Begin header -->
     <p class="header-logo-text">
-      LIUCODE
+      Michael Liu
     </p>
     <p class="header-logo-text-remark">
-      by Michael Liu
+      Coder, designer, nerd
     </p>
     <!-- End header -->
 
     <!-- About list -->
     <ul class="about-list">
-      <li class="about-list-item transition" data-modal-bind="about">
+      <li id="offset" class="about-list-item transition selected" style="margin-top:1100px;" data-modal-bind="about">
         About Me
       </li>
       <li class="about-list-item transition" data-modal-bind="work">
@@ -35,10 +35,8 @@
     </ul>
     <!-- End about list -->
 
-    <!-- Planet -->
-    <div class="planet">
+    <div class="about-list-arrow">
     </div>
-    <!-- End planet -->
 
   </body>
 </html>
