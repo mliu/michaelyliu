@@ -24,25 +24,19 @@ body{
 
 /************HEADER*************/
 
-.container{
-  width:100%;
-  height:100px;
-  margin:20px 0 0 0;
-  padding:0;
-}
-
-.header-logo-text{
-  display:inline;
-  margin:0;
+header h1{
+  display:block;
+  margin:35px 0 0 0;
   padding-left:285px;
   font-size:4em;
   font-weight:bold;
   cursor:default;
 }
 
-.header-logo-text-remark{
+header h1 small{
   display:inline;
-  font-size:2em;
+  font-size:0.5em;
+  font-weight:300;
   color:#A0A0A0;
   cursor:default;
 }
@@ -51,7 +45,7 @@ body{
 
 .about-image{
   position:absolute;
-  bottom:5%;
+  top:0;
   left:10px;
   opacity:0;
 }
@@ -60,33 +54,32 @@ body{
 
 .about-list{
   display:inline;
-  position:absolute;
+  position:fixed;
   overflow:hidden;
   height:100%;
-  /*left:80%;*/
+  top:0;
   right:0;
   margin:0;
   padding:0 30px 0 30px;
   list-style-type:none;
   /*background-color:#E8E8E8;*/
-  
-/* IE10 Consumer Preview */ 
-background-image: -ms-linear-gradient(left, #FFFFFF 0%, #C4C4C4 100%);
+  /* IE10 Consumer Preview */ 
+  background-image: -ms-linear-gradient(left, #FFFFFF 0%, #C4C4C4 100%);
 
-/* Mozilla Firefox */ 
-background-image: -moz-linear-gradient(left, #FFFFFF 0%, #C4C4C4 100%);
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(left, #FFFFFF 0%, #C4C4C4 100%);
 
-/* Opera */ 
-background-image: -o-linear-gradient(left, #FFFFFF 0%, #C4C4C4 100%);
+  /* Opera */ 
+  background-image: -o-linear-gradient(left, #FFFFFF 0%, #C4C4C4 100%);
 
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFFFFF), color-stop(1, #C4C4C4));
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFFFFF), color-stop(1, #C4C4C4));
 
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-linear-gradient(left, #FFFFFF 0%, #C4C4C4 100%);
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(left, #FFFFFF 0%, #C4C4C4 100%);
 
-/* W3C Markup, IE10 Release Preview */ 
-background-image: linear-gradient(to right, #FFFFFF 0%, #C4C4C4 100%);
+  /* W3C Markup, IE10 Release Preview */ 
+  background-image: linear-gradient(to right, #FFFFFF 0%, #C4C4C4 100%);
   text-align:left;
 }
 
@@ -117,4 +110,10 @@ background-image: linear-gradient(to right, #FFFFFF 0%, #C4C4C4 100%);
 .visible{
   opacity:1;
   z-index:2;
+}
+
+/***********OTHER***************/
+
+.about-me{
+  width:450px;
 }
