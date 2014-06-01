@@ -52,10 +52,10 @@ header h1 small{
 
 .profile-picture{
   position:absolute;
-  top:150px;
-  right:600px;
-  border-radius:50%;
-  zoom:0.5;
+  top:20px;
+  right:15%;
+  border-radius:10px;
+  zoom:0.75;
 }
 
 /***************LIST**************/
