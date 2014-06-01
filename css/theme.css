@@ -50,6 +50,14 @@ header h1 small{
   opacity:0;
 }
 
+.profile-picture{
+  position:absolute;
+  top:150px;
+  right:600px;
+  border-radius:50%;
+  zoom:0.5;
+}
+
 /***************LIST**************/
 
 .about-list{
