@@ -16,11 +16,13 @@ $(document).ready(function(){
   }, 100);
 
   $(".about-list-item").click(function(){
-    var slide = $(".selected").data("modal-bind");
+    var data = $(".selected").data("modal-bind");
     $(".selected").removeClass("selected");
-    $("body").find("[data-modal='" + slide + "']").removeClass("visible");
+    $("body").find("[data-modal='" + data + "']").removeClass("visible");
+    $("body").find("[data-img='"  + data + "']").removeClass("visible");
     $(this).addClass("selected");
-    slide = $(this).data("modal-bind");
-    $("body").find("[data-modal='" + slide + "']").addClass("visible");
+    data = $(this).data("modal-bind");
+    $("body").find("[data-modal='" + data + "']").addClass("visible");
+    $("body").find("[data-img='"  + data + "']").addClass("visible");
   });
 });
