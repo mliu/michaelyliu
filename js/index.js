@@ -15,13 +15,28 @@ $(document).ready(function(){
     }
   }, 100);
 
-  $(".about-list-item").click(function(){
+  $(".nav-item").click(function(){
     var data = $(".selected").data("modal-bind");
     $(".selected").removeClass("selected");
+    $("body").find("[data-m-modal-bind='" + data + "']").removeClass("mobile-selected");
     $("body").find("[data-modal='" + data + "']").removeClass("visible");
     $("body").find("[data-img='"  + data + "']").removeClass("visible");
     $(this).addClass("selected");
     data = $(this).data("modal-bind");
+    $("body").find("[data-m-modal-bind='" + data + "']").addClass("mobile-selected");
+    $("body").find("[data-modal='" + data + "']").addClass("visible");
+    $("body").find("[data-img='"  + data + "']").addClass("visible");
+  });
+
+  $(".mobile-nav-item").click(function(){
+    var data = $(".mobile-selected").data("m-modal-bind");
+    $(".mobile-selected").removeClass("mobile-selected");
+    $("body").find("[data-modal-bind='" + data + "']").removeClass("selected");
+    $("body").find("[data-modal='" + data + "']").removeClass("visible");
+    $("body").find("[data-img='"  + data + "']").removeClass("visible");
+    $(this).addClass("mobile-selected");
+    data = $(this).data("m-modal-bind");
+    $("body").find("[data-modal-bind='" + data + "']").addClass("selected");
     $("body").find("[data-modal='" + data + "']").addClass("visible");
     $("body").find("[data-img='"  + data + "']").addClass("visible");
   });

@@ -28,7 +28,7 @@
     <!-- About list slides -->
     <section class="about-block visible transition" data-modal="about">
       <div class="about-me-text-container">
-        <h2>Hello! Welcome to my portfolio.</h2>
+        <h2>Hello!</h2>
         <p class="about-me">I am currently a student majoring in Computer Science and Business at Virginia Tech, and graduate of Thomas Jefferson High School for Science and Technology. In my senior year of high school, I attended my first hackathon and discovered the wonderful world of web development.
         <br><br>
         I'm fluent in Ruby, Java, Python, Git, Javascript, JQuery, CSS, and HTML. My experience with web frameworks include Rails, Node.js, Django, Closure, and Knockout.js. Feel free to contact me for work offers via email and I'll get back to you ASAP.
@@ -40,15 +40,18 @@
         -Michael
         </p>
       </div>
-      <img class="profile-picture" src="images/mebw.jpeg">
+      <!-- <img class="profile-picture transition" src="images/mebw.jpeg"> -->
     </section>
+
     <section class="about-block transition" data-modal="work">
-      Blah
+      <h2>What I'm working on:</h2>
     </section>
+
     <section class="about-block transition" data-modal="contact">
       <h2>Got a question?</h2>
       <p>Shoot me an email at  <a href="mailto:hello@michaelyliu.com" target="_top">hello@michaelyliu.com</a></p>
     </section>
+
     <section class="about-block transition" data-modal="links">
       <h2>Find me...</h2>
       <p>... On <a href="https://www.linkedin.com/profile/view?id=287004653" target="_top">LinkedIn</a>.
@@ -61,20 +64,28 @@
 
     <!-- About list -->
     <ul class="about-list">
-      <li id="offset" class="about-list-item transition selected" style="margin-top:1100px;" data-modal-bind="about">
+      <li id="offset" class="nav-item about-list-item transition selected" style="margin-top:1100px;" data-modal-bind="about">
         About me
       </li>
-      <li class="about-list-item transition" data-modal-bind="work">
+      <li class="nav-item about-list-item transition" data-modal-bind="work">
         My work
       </li>
-      <li class="about-list-item transition" data-modal-bind="contact">
+      <li class="nav-item about-list-item transition" data-modal-bind="contact">
         Contact me
       </li>
-      <li class="about-list-item transition" data-modal-bind="links">
+      <li class="nav-item about-list-item transition" data-modal-bind="links">
         Links
       </li>
     </ul>
     <!-- End about list -->
+
+    <!-- Mobile nav -->
+    <ul class="about-list-mobile">
+      <li class="mobile-nav-item mobile-selected" style="display:inline-block" data-m-modal-bind="about">About me</li>
+      <li class="mobile-nav-item" style="display:inline-block" data-m-modal-bind="work">My work</li>
+      <li class="mobile-nav-item" style="display:inline-block" data-m-modal-bind="contact">Contact me</li>
+      <li class="mobile-nav-item" style="display:inline-block" data-m-modal-bind="links">Links</li>
+    </ul>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/index.js" type="text/javascript"></script>

@@ -41,6 +41,14 @@ header h1 small{
   cursor:default;
 }
 
+@media screen and (max-width: 1420px){
+  header h1 small{
+    display:block;
+    font-size:0.35em;
+    padding-left:5px;
+  }
+}
+
 /************IMAGE****************/
 
 .about-image{
@@ -50,12 +58,33 @@ header h1 small{
   opacity:0;
 }
 
+@media screen and (max-width:1000px){
+  .about-image{
+    display:none;
+  }
+
+  header h1{
+    padding-left:10px;
+  }
+
+  .about-block{
+    padding-left:10px !important;
+  }
+}
+
 .profile-picture{
   display:inline;
   float:right;
+  opacity:1;
   margin-top:-70px;
   border-radius:10px;
   zoom:0.75;
+}
+
+@media screen and (max-width: 1600px){
+  .profile-picture{
+    opacity:0;
+  }
 }
 
 /***************LIST**************/
@@ -95,13 +124,28 @@ header h1 small{
   color:#4D9494;
 }
 
+.mobile-selected{
+  color:#4D9494;
+}
+
 .about-list-item{
   font-size:2.5em;
   cursor:pointer;
 }
 
+.mobile-nav-item{
+  font-size:1.2em;
+  padding-right:5px;
+  cursor:pointer;
+}
+
 .about-list-item:hover{
   color:#606060;
+}
+
+.about-list-mobile{
+  display:none;
+  padding-left:15px;
 }
 
 /**************ABOUT BLOCK****************/
@@ -111,7 +155,7 @@ header h1 small{
   width:60%;
   height:80%;
   margin-top:20px;
-  left:15%;
+  padding-left:244px;
   opacity:0;
 }
 
@@ -129,4 +173,19 @@ header h1 small{
 
 .about-me-text-container{
   display:inline;
+}
+
+/*********MOBILE***************/
+
+@media screen and (max-width:650px){
+  .about-list{
+    display:none;
+  }
+
+  .about-list-mobile{
+    list-style-type:none;
+    display:block;
+    position:absolute;
+    top:0;
+  }
 }
