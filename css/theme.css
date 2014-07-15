@@ -152,6 +152,7 @@ header h1 small{
 
 .about-block{
   position:fixed;
+  overflow-y:auto;
   width:60%;
   height:80%;
   margin-top:20px;
@@ -166,18 +167,9 @@ header h1 small{
 
 /***********OTHER***************/
 
-.about-me{
-  display:inline-block;
-  width:450px;
-}
-
-.about-me-text-container{
-  display:inline;
-}
-
 /*********MOBILE***************/
 
-@media screen and (max-width:650px){
+@media screen and (max-width:701px){
   .about-list{
     display:none;
   }
