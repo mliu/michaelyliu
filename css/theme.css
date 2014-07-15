@@ -151,7 +151,7 @@ header h1 small{
 /**************ABOUT BLOCK****************/
 
 .about-block{
-  position:fixed;
+  position:absolute;
   overflow-y:auto;
   width:60%;
   height:80%;
@@ -166,6 +166,10 @@ header h1 small{
 }
 
 /***********OTHER***************/
+
+.about-me{
+  max-width:450px;
+}
 
 /*********MOBILE***************/
 
