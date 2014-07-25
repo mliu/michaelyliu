@@ -1,0 +1,743 @@
+// This file was automatically generated from servers.soy.
+// Please don't edit this file by hand.
+
+goog.provide('ck.templates.servers');
+
+goog.require('soy');
+goog.require('soydata');
+goog.require('ck.templates.common');
+goog.require('ck.templates.controls');
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.listLayout = function(opt_data, opt_ignored) {
+  return '<div id="servers-list-container" class="rs-main"><div id="sidebar-container" class="rs-sidebar rs-pull-left"><header class="page_header"><h2 id="app_header" class="rs-page-title">' + soy.$$escapeHtml(opt_data.labels.cloudServers) + '</h2></header><div id="facets" class="facets-wrapper"></div></div><div class="rs-content rs-panel"><div class="rs-inner"><header class="page_header"><div id="node_filter" class="inputContainer list-table-search"><div class="search-filter"><input id="serversQueryInput" class="input-medium search-input" type="text"><button id="clearQueryInput" class="search-input-button"></button></div></div><div id="servers-action-bar"></div></header><div id="nodes" class="large_table"></div></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.serversActionBar = function(opt_data, opt_ignored) {
+  return '<div class="button_group"><span class="btn-sub-group"></span><button id="batch-server-delete" class="rs-btn">Delete</button></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.unverifiedWarning = function(opt_data, opt_ignored) {
+  return '<div data-bind="if: displayWarning"><div class="ck-app-warning unverified-user-warning"><span class="unverified-user-warning-inner">' + ((opt_data.shouldShowPhoneNumber) ? '<span class="user-warning-emphasis">Your account is <strong>pending activation</strong></span> ? we will contact you within an hour. For faster activation, call ' + soy.$$escapeHtml(opt_data.activationNumber) + '. Until then, you won\'t be able to create a server.' : '<span class="user-warning-emphasis">Your account is <strong>pending activation</strong></span> ? we will contact you within an hour. Until then, you won\'t be able to create a server.') + '</span></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.createServerAndDeploymentMenuButton = function(opt_data, opt_ignored) {
+  return '<button id="create-server-button" class="rs-btn rs-btn-primary has-menu-button">Create Server</button><button id="create-server-menu-button" class="rs-btn rs-btn-primary has-menu-button"></button>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.imagesSidebar = function(opt_data, opt_ignored) {
+  return '<div class="rs-inner"><h3>' + soy.$$escapeHtml(opt_data.labels.header) + '</h3><p>' + soy.$$escapeHtml(opt_data.labels.help) + '</p><p><a href="http://www.rackspace.com/knowledge_center/content/about-images" data-metric-element-id="Learn More About Images" target="_blank">' + soy.$$filterNoAutoescape(opt_data.labels.link) + '</a></p>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.facet = function(opt_data, opt_ignored) {
+  return '<div><span title="' + soy.$$escapeHtml(opt_data.facetTitle) + '">' + ((opt_data.asterisk) ? '<span class=\'legacyAsterisk\'></span> ' : '') + soy.$$escapeHtml(opt_data.facetName) + '</span> <span class=\'facetCount\'>(' + soy.$$escapeHtml(opt_data.facetCount) + ')</span></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.createSidebar = function(opt_data, opt_ignored) {
+  return '<div class="rs-inner"><h3>Setting Up Your Server</h3><h4>Choosing A Region</h4><p>Choose the same region for your server as your other cloud resources to avoid bandwidth charges.</p><p><a href=\'http://www.rackspace.com/knowledge_center/article/about-regions\' data-metric-element-id="More about Choosing Regions" target=\'_blank\'>More about Choosing Regions &raquo;</a></p><hr><h4>Help Me With...</h4><ul><li><a href=\'http://www.rackspace.com/knowledge_center/article/choosing-a-linux-distribution\' data-metric-element-id="Choosing the Right Image" target=\'_blank\'>Choosing the Right Image</a></li><li><a href=\'http://www.rackspace.com/knowledge_center/node/2222\' data-metric-element-id="Choosing the Right Size" target=\'_blank\'>Choosing the Right Size</a></li><li><a href=\'http://www.rackspace.com/knowledge_center/article/what-is-new-with-performance-cloud-servers\' data-metric-element-id="Using Performance Flavors" target=\'_blank\'>Using Performance Flavors</a></li></ul><p><a href=\'http://www.rackspace.com/knowledge_center/node/2224\' data-metric-element-id="Learn More about Cloud Servers" target=\'_blank\'>Learn More about Cloud Servers &raquo;</a></p><hr><h4>What\'s Next?</h4><ul><li><a href="http://www.rackspace.com/knowledge_center/article/migrating-to-a-performance-cloud-server" data-metric-element-id="Migrate to Performance Servers" target="_blank">Migrate to Performance Servers</a></li><li><a href=\'http://www.rackspace.com/knowledge_center/node/2225\' data-metric-element-id="Log into Your Server" target=\'_blank\'>Log into Your Server</a></li><li><a href=\'http://www.rackspace.com/knowledge_center/node/2226\' data-metric-element-id="Configure Basic Security" target=\'_blank\'>Configure Basic Security</a></li></ul><p><a href=\'http://www.rackspace.com/knowledge_center/\' data-metric-element-id="Visit Our Knowledge Center" target=\'_blank\'>Visit Our Knowledge Center &raquo;</a></p></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.createNetworkButton = function(opt_data, opt_ignored) {
+  return '<div class="rs-btn-group"><button id="create-network-button" class="rs-btn" type="button">Create Network</button></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.detailsSidebar = function(opt_data, opt_ignored) {
+  return '<div class="rs-inner server-details-sidebar loading"><h3>' + soy.$$escapeHtml(opt_data.headers.managingYourServer) + '</h3><div id="server_details_remote_login_help"><h4>' + soy.$$escapeHtml(opt_data.headers.logInToYourServer) + '</h4><p class="linux_remote_login_info">' + soy.$$escapeHtml(opt_data.text.linuxLogIn) + '</p><p id="remote_login_windows_text" class="windows_remote_login_info"></p><pre class="ssh_code_container"><code><a id="server_details_ssh_command" href="#"></a></code></pre><p><a href="http://www.rackspace.com/knowledge_center/node/2228" data-metric-element-id="More Remote Login Commands" target="_blank">' + soy.$$escapeHtml(opt_data.links.moreRemoteLoginCommands) + ' &raquo;</a></p><hr></div><h4>' + soy.$$escapeHtml(opt_data.headers.helpMeWith) + '</h4><ul><li><a href="http://www.rackspace.com/knowledge_center/node/2226" data-metric-element-id="Configuring Basic Security" target="_blank">' + soy.$$escapeHtml(opt_data.links.basicSecurity) + '</a></li><li><a href="http://www.rackspace.com/knowledge_center/node/2230" data-metric-element-id="Rebuilding My Server" target="_blank">' + soy.$$escapeHtml(opt_data.links.rebuildServer) + '</a></li><li><a href="http://www.rackspace.com/knowledge_center/article/creating-a-monitoring-check-using-the-cloud-control-panel" data-metric-element-id="Creating a Monitoring Check" target="_blank">' + soy.$$escapeHtml(opt_data.links.creatingMonitoringCheck) + '</a></li></ul><p><a href="http://www.rackspace.com/knowledge_center/node/2224" data-metric-element-id="Learn More about Cloud Servers" target="_blank">' + soy.$$escapeHtml(opt_data.links.learnMore) + ' &raquo;</a></p><hr><h4>' + soy.$$escapeHtml(opt_data.headers.whatsNext) + '</h4><ul><li><a href="http://www.rackspace.com/knowledge_center/node/2231" data-metric-element-id="Configuring and Using DNS" target="_blank">' + soy.$$escapeHtml(opt_data.links.usingDns) + '</a></li><li><a href="http://www.rackspace.com/knowledge_center/node/2232" data-metric-element-id="Load Balancing My Servers" target="_blank">' + soy.$$escapeHtml(opt_data.links.usingLoadBalancers) + '</a></li><li><a href="http://www.rackspace.com/knowledge_center/article/introduction-to-mailgun-email-automation" data-metric-element-id="Configuring Outbound Email" target="_blank">' + soy.$$escapeHtml(opt_data.links.configuringOutboundEmail) + '</a></li></ul><p><a href="http://www.rackspace.com/knowledge_center/" data-metric-element-id="Visit Our Knowledge Center" target="_blank">' + soy.$$escapeHtml(opt_data.links.knowledgeCenter) + ' &raquo;</a></p><hr><h4>' + soy.$$escapeHtml(opt_data.headers.cloudToolsMarketplace) + '</h4><ul><li><a href="https://cloudtools.rackspace.com/apps/483" data-metric-element-id="Security: Cloud Passage Halo" target="_blank">' + soy.$$escapeHtml(opt_data.links.security) + '</a></li><li><a href="https://cloudtools.rackspace.com/apps/263" data-metric-element-id="Management: RightScale" target="_blank">' + soy.$$escapeHtml(opt_data.links.management) + '</a></li><li><a href="https://cloudtools.rackspace.com/apps/347" data-metric-element-id="Application Monitoring: New Relic" target="_blank">' + soy.$$escapeHtml(opt_data.links.monitoring) + '</a></li></ul><p><a href="https://cloudtools.rackspace.com/home" data-metric-element-id="Visit the Cloud Tools Marketplace" target="_blank">' + soy.$$escapeHtml(opt_data.links.cloudToolsMarketplace) + ' &raquo;</a></p></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.graphSection = function(opt_data, opt_ignored) {
+  return '<div class="rs-detail-section rs-collapsible-section graph-section"><div class="rs-detail-section-header"><div class="rs-caret" style="display:none"></div><div class="rs-detail-section-title">Monitoring Data</div><span class="no-data-label">0 graphs</span><div class="rs-detail-section-subtitle"></div></div><div class="rs-detail-section-body"><div class="graph-selector-wrapper"></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.graphSelector = function(opt_data, opt_ignored) {
+  var output = '<div>';
+  if (opt_data.availableGraphs.length != 0) {
+    output += '<select id="graph-selector">';
+    var graphList189 = opt_data.availableGraphs;
+    var graphListLen189 = graphList189.length;
+    for (var graphIndex189 = 0; graphIndex189 < graphListLen189; graphIndex189++) {
+      var graphData189 = graphList189[graphIndex189];
+      output += '<option value="' + soy.$$escapeHtml(graphData189.value) + '">' + soy.$$escapeHtml(graphData189.label) + '</option>';
+    }
+    output += '</select><a class="sso-link" target="_blank" href="' + soy.$$escapeHtml(opt_data.ssoLink) + '" >View Server\'s Metrics in Cloud Intelligence (Beta)</a><div class="graph-wrapper"></div>';
+  }
+  output += '</div>';
+  return output;
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.monitoring = function(opt_data, opt_ignored) {
+  return '<div class="rs-detail-section rs-collapsible-section monitoring-section"><div class="rs-detail-section-header"><div class="rs-caret" style="display:none"></div><div class="rs-detail-section-title">' + soy.$$escapeHtml(opt_data.labels.monitoring) + '</div><div class="rs-detail-section-subtitle"></div></div><div class="rs-detail-section-body"><button id="check_target" class="createCheck rs-btn">' + soy.$$escapeHtml(opt_data.labels.createCheck) + '</button><div class="monitoring-unavailable">' + soy.$$escapeHtml(opt_data.labels.monitoringUnavailable) + '</div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.generateList = function(opt_data, opt_ignored) {
+  var output = '';
+  var itemList212 = opt_data.items;
+  var itemListLen212 = itemList212.length;
+  for (var itemIndex212 = 0; itemIndex212 < itemListLen212; itemIndex212++) {
+    var itemData212 = itemList212[itemIndex212];
+    output += '<li>' + soy.$$filterNoAutoescape(itemData212) + '</li>';
+  }
+  return output;
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.detailsView = function(opt_data, opt_ignored) {
+  return '<div id="detailsContainer" class="details-view server-details-view"><div class="rs-back-link"><a href="#">&#8249; ' + soy.$$escapeHtml(opt_data.labels.backToList) + '</a></div><div class="rs-main rs-panel"><div id="sidebar-container" class="rs-sidebar rs-pull-right"></div><div class="rs-content rs-panel"></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.infoSection = function(opt_data, opt_ignored) {
+  return '<div class="rs-detail-section rs-collapsible-section info-section"><div class="rs-detail-section-header"><div class="rs-caret" style="display:none"></div><div class="rs-detail-section-title">' + soy.$$escapeHtml(opt_data.labels.serverDetails) + '</div><div class="rs-detail-section-subtitle"></div></div><div class="rs-detail-section-body"><dl><dt class="details_key">' + soy.$$escapeHtml(opt_data.labels.serverStatus) + '</dt><dd class="details_value"><div id="server_status" class="rs-status" data-bind="text: statusName, class: statusClass"></div><div id="server_status_extra_info" class="extra_details_status" data-bind="html: statusExtraInfo"></div></dd><dt class="details_key">' + soy.$$escapeHtml(opt_data.labels.serverId) + '</dt><dd id="server_id" class="details_value" data-bind="text: server.id"></dd><dt id="rebuild-target" class="details_key">' + soy.$$escapeHtml(opt_data.labels.image) + '</dt><dd class="details_value server_image_name_value" data-bind="class: imageClass"><span id="server_image_name" data-bind="text: imageDisplayName, class: imageDistroClass"></span><span class="details-divider"></span><button id="rebuild-toggle" class="rs-btn rs-btn-link rebuild-toggle">' + soy.$$escapeHtml(opt_data.labels.rebuildImage) + '</button></dd><dt id="resize-target" class="details_key">' + soy.$$escapeHtml(opt_data.labels.flavor) + '</dt><dd class="details_value server_flavor_name_value" data-bind="class: flavorClass"><span id="server_flavor_name"></span><span class="details-divider"></span><button id="resize-toggle" class="rs-btn rs-btn-link resize-toggle" data-bind="text: resizeLabel"></button></dd><dt class="details_key" data-bind="visible: shouldShowSsh()">' + soy.$$escapeHtml(opt_data.labels.sshKey) + '</dt><dd id="ssh_key" class="details_value" data-bind="visible: shouldShowSsh()"><span data-bind="text: server.keyName"></span><span class="ssh-key-help-tooltip" data-bind="component: sshKeyTooltip"></span></dd>' + ((opt_data.showDiskConfig) ? '<dt class="details_key">' + soy.$$escapeHtml(opt_data.labels.diskConfigType) + '</dt><dd id="disk_config_type_value" class="details_value"><span data-bind="text: diskConfigType"></span><span class="details-disk-config-tooltip"></span></dd>' : '') + '<div id="agent-details-container"></div><dt class="details_key">' + soy.$$escapeHtml(opt_data.labels.region) + '</dt><dd id="server_region" class="details_value" data-bind="text: regionName"></dd>' + ((opt_data.showServerType) ? '<dt class="details_key">' + soy.$$escapeHtml(opt_data.labels.type) + '</dt><dd id="server_type" class="details_value" data-bind="html: serverType"></dd>' : '') + ((opt_data.showReverseDns) ? '<dt id="reverse_dns_target" class="details_key">' + soy.$$escapeHtml(opt_data.labels.reverseDns) + '</dt><dd id="reverse_dns_value" class="details_value"><button id="reverse_dns_record_count" class="rs-btn rs-btn-link details_toggle"></button><span class="details-divider"></span><button id="reverse_dns_record_toggle" class="rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.labels.createReverseDnsRecord) + '</button><span id="no_ips_available_tooltip_toggle" class="tooltip_toggle" style="display: none;"></span></dd>' : '') + '<dt class="details_key" data-bind="visible: shouldShowCreatedTime">' + soy.$$escapeHtml(opt_data.labels.created) + '</dt><dd class="details_value" data-bind="visible: shouldShowCreatedTime"><span data-bind="text: server.createdAt"></span></dd><dt class="details_key" data-bind="visible: shouldShowUpdatedTime">' + soy.$$escapeHtml(opt_data.labels.updated) + '</dt><dd class="details_value" data-bind="visible: shouldShowUpdatedTime"><span data-bind="text: server.updatedAt"></span></dd></dl></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.agentDetails = function(opt_data, opt_ignored) {
+  return '<div><div id="agent-host-info-section"><dt class="details_key">RAM</dt><dd id="monitoring-agent-ram-value" class="details_value"></dd><dt class="details_key">Disk</dt><dd id="monitoring-agent-disk-value" class="details_value"></dd><dt class="details_key">CPUs</dt><dd id="monitoring-agent-cpus-value" class="details_value"></dd><dt id="server_details_processes_target" class="details_key">Processes</dt><dd class="details_value"><button id="server_details_view_processes_toggle" class="rs-btn rs-btn-link view_processes_toggle">View Running Processes&#x2026;</button></dd></div><dt id="monitoring_agent_target" class="details_key">Monitoring Agent</dt><dd class="details_value agent-status hide-install-toggle"><span id="monitoring_agent"></span><span class="install_agent_toggle_container"><span class="details-divider"></span><button id="install_agent_toggle" class="rs-btn rs-btn-link install_agent_toggle">Install Agent&#x2026;</button></span></dd></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.rackConnectIps = function(opt_data, opt_ignored) {
+  return '<dt class="details_key">' + soy.$$escapeHtml(opt_data.label) + '</dt><dd class="details_value"><ul id="server_rack_connect_ips" class="ip_address_list"></ul></dd>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.advancedOptions = function(opt_data, opt_ignored) {
+  var output = '';
+  var kc_url__soy291 = 'http://www.rackspace.com/knowledge_center/article/understanding-and-using-automatic-and-manual-disk-partitioning-in-the-rackspace-cloud';
+  output += '<section class="create_section rs-detail-section" id="advanced-options"><div class="section_header collapsible-trigger"><div class="rs-detail-section-title">Advanced Options</div><div class="header-summary"><span data-bind="text: advancedOptionsSummary"></span></div><div class="collapsible-toggle"></div></div><div class="collapsible-content"></div></section>';
+  return output;
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.diskConfigSelectionForm = function(opt_data, opt_ignored) {
+  return '<div class="disk-config-selection-popover"><form id="disk-config-selection-form" class="rs-form-horizontal rs-form-large"><section>' + ck.templates.servers.diskConfigSelector(opt_data) + '</section><section class="disk-config-form-warning-text-content"><p class="warning-text-paragraph"> <strong>Warning</strong>: Switching disk partition will fail if you have more than one partition.</p></section><div class="save-cancel">' + ck.templates.controls.panel(opt_data) + '</div></form></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.diskConfigSelector = function(opt_data, opt_ignored) {
+  return '<div class="rs-control-group"><label class="rs-control-label" for="disk-section">Disk Configuration</label><div class="rs-controls"><div class="disk-config-radio-selector"></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.diskConfigRadioSelection = function(opt_data, opt_ignored) {
+  return '<div class="radio-group" id="disk-section"><label class="radio"><input type="radio" name="disk-config" class="disk-config-manual" data-bind="checked: diskConfigType" value="MANUAL" /><div class="radio-title">Manual<span class="disk-config-manual-tooltip help-tooltip-icon" data-bind="tooltip: manualTooltip"></span></div><div class="radio-description">Faster build times but requires manual partitioning</div></label><label class="radio"><input type="radio" name="disk-config" class="disk-config-auto" data-bind="checked: diskConfigType" value="AUTO" /><div class="radio-title">Automatic<span class="disk-config-auto-tooltip help-tooltip-icon" data-bind="tooltip: autoTooltip"></span></div><div class="radio-description">Entire disk is single partition and automatically resizes</div></label></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.createView = function(opt_data, opt_ignored) {
+  return '<div id="server-create-container" class="create-view"><div class="rs-back-link"><a href="#">&#8249; ' + soy.$$escapeHtml(opt_data.labels.backToList) + '</a></div><div class="rs-main rs-panel"><div id="sidebar-container" class="rs-sidebar rs-pull-right"></div><div class="create rs-content rs-panel">' + ((opt_data.isTabbedForm) ? '<form id="create-server-form" class="rs-form-create ck-tabbed-form-create">' : '<form id="create-server-form" class="rs-form-create">') + '<header class="page_header"><div class="servers-pricing-tooltip"></div><h2 class="rs-page-title">' + soy.$$escapeHtml(opt_data.labels.createServer) + '</h2></header></form><section class="save-cancel-section" id="server-create-save-cancel"><div class="save-cancel"><div class="servers-pricing-tooltip"></div>' + ck.templates.controls.panel(opt_data) + '</div></section></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.serverIdentitySection = function(opt_data, opt_ignored) {
+  return '<section class="create_section identity-section" id="server-identity-section"><header class="section_header"><h2 class="section_title">Server Details</h2></header><dl><dt class="create_key"><label for="server_name">Server Name</label></dt><dd class="create_value"><input type="text" id="server_name" data-bind="value: serverName"><span class="tooltip_toggle" data-bind="tooltip: nameTooltip"></span></dd><dt class="create_key"><div class="rs-label">Region</div></dt><dd class="create_value regions"><div id="create-server-provider-select"></div></dd></dl></section>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.serverImageSection = function(opt_data, opt_ignored) {
+  return '<section class="create_section image-section" id="server-image-section"><header class="section_header"><h2 class="section_title">Image</h2></header><div id="image_list"></div><div class="image_input table-validator" data-bind="validationMessage: imageId"></div></section>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.imagesView = function(opt_data, opt_ignored) {
+  return '<div id="imagesContainer" class="rs-main rs-panel list-view sidebar"><div id="sidebar-container" class="rs-sidebar rs-pull-right"></div><div class="rs-content rs-panel"><div class="rs-inner"><section class="list_section"><header class="page_header"><h2 class="rs-page-title">' + soy.$$escapeHtml(opt_data.labels.savedImages) + '</h2></header><div class="rs-btn-group"><button id="batch-image-delete" class="rs-btn">' + soy.$$escapeHtml(opt_data.labels.deleteImages) + '</button></div><div id="image_list" class="saved-images-list large_table"></div></section></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.networkIpCell = function(opt_data, opt_ignored) {
+  var output = ((opt_data.ips.length == 0) ? '<p class="no_ip_address">' + soy.$$escapeHtml(opt_data.emptyMessage) + '</p>' : '') + '<ul class="server-network-ip-list">';
+  var ipList378 = opt_data.ips;
+  var ipListLen378 = ipList378.length;
+  for (var ipIndex378 = 0; ipIndex378 < ipListLen378; ipIndex378++) {
+    var ipData378 = ipList378[ipIndex378];
+    output += '<li><span>' + soy.$$escapeHtml(ipData378) + '</span></li>';
+  }
+  output += '</ul>';
+  return output;
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.headerSection = function(opt_data, opt_ignored) {
+  return '<div id="server_actions" class="details_actions"></div><div class="details_category">' + soy.$$escapeHtml(opt_data.labels.category) + '</div><div class="details_title"><div id="server_name" class="details_name"></div></div><div id="server_tags" class="details_tags"></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.networksSection = function(opt_data, opt_ignored) {
+  return '<div class="rs-detail-section rs-collapsible-section networks_section"><div class="rs-detail-section-header"><div class="rs-caret" style="display:none"></div><div class="rs-detail-section-title">Networks</div><div class="rs-detail-section-subtitle"></div></div><div class="rs-detail-section-body"></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.learnMoreAboutAttachingAndDetachingNetworks = function(opt_data, opt_ignored) {
+  return 'Connect this server to other networks.  Learn more about <a href="http://www.rackspace.com/knowledge_center/article/cloud-servers-attaching-and-detaching-networks" target="_blank">this feature.<i class="rs-icon-external"></i></a>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.imageSection = function(opt_data, opt_ignored) {
+  return '<div class="rs-detail-section rs-collapsible-section images_section"><div class="rs-detail-section-header"><div class="rs-caret" style="display:none"></div><div class="rs-detail-section-title">' + soy.$$escapeHtml(opt_data.title) + '</div><div class="rs-detail-section-subtitle"></div></div><div class="rs-detail-section-body"><div id="server_details_schedule_container"></div><dl><dt id="server_details_image_target" class="details_key">' + soy.$$escapeHtml(opt_data.savedImages) + '</dt><dd class="details_value"><button id="server_details_view_images" class="rs-btn rs-btn-link"></button><span class="details-divider"></span><button id="server_details_create_image" class="rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.createImage) + '</button></dd></dl></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.firstGenImageSchedule = function(opt_data, opt_ignored) {
+  return '<dl><dt id="server_details_schedule_target" class="details_key">' + soy.$$escapeHtml(opt_data.schedules) + '</dt><dd class="details_value"><ul><li id="server_details_daily_schedule" class="image_schedule"><span class="image_schedule_description"></span><span class="image_schedule_create_controls"><button class="image_schedule_create rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.createSchedule) + '</button></span><span class="image_schedule_edit_controls"><button class="image_schedule_edit rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.editSchedule) + '</button><span class="details-divider"></span><button class="image_schedule_delete rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.deleteSchedule) + '</button></span></li><li id="server_details_weekly_schedule" class="image_schedule"><span class="image_schedule_description"></span><span class="image_schedule_create_controls"><button class="image_schedule_create rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.createSchedule) + '</button></span><span class="image_schedule_edit_controls"><button class="image_schedule_edit rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.editSchedule) + '</button><span class="details-divider"></span><button class="image_schedule_delete rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.deleteSchedule) + '</button></span></li></ul></dd></dl>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.nextGenImageSchedule = function(opt_data, opt_ignored) {
+  return '<dl><dt id="server_details_schedule_target" class="details_key">' + soy.$$escapeHtml(opt_data.schedules) + '</dt><dd class="details_value"><ul><li id="server_details_daily_schedule" class="image_schedule"><span class="image_schedule_description"></span><span class="image_schedule_create_controls"><button class="image_schedule_create rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.createSchedule) + '</button></span><span class="image_schedule_edit_controls"><button class="image_schedule_edit rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.editSchedule) + '</button><span class="details-divider"></span><button class="image_schedule_delete rs-btn rs-btn-link">' + soy.$$escapeHtml(opt_data.deleteSchedule) + '</button></span></li></ul></dd></dl>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.volumeSection = function(opt_data, opt_ignored) {
+  return '<div class="rs-detail-section rs-collapsible-section volumes_section"><div class="rs-detail-section-header"><div class="rs-caret" style="display:none"></div><div class="rs-detail-section-title">' + soy.$$escapeHtml(opt_data.title) + '</div><div class="rs-detail-section-subtitle"></div></div><div class="rs-detail-section-body"><div class="rs-btn-group"><button id="attach_volume" class="rs-btn" disabled="true">' + soy.$$escapeHtml(opt_data.attachVolume) + '</button><button id="create_volume" class="rs-btn" disabled="true">' + soy.$$escapeHtml(opt_data.createVolume) + '</button></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.backupAgentItem = function(opt_data, opt_ignored) {
+  return '<div><span class="confirmation-inline" data-bind="visible: isAgentInstalled()"><i class="confirmation-indicator successful-confirmation-indicator"></i>Installed</span><span class="confirmation-inline" data-bind="visible: !isAgentInstalled()"><i class="confirmation-indicator warning-confirmation-indicator"></i>Not installed. To begin server backups, <a href="' + soy.$$filterNoAutoescape(opt_data.cloudBackupAgentKcLink) + '" target="_blank" data-metric-element-id="Install Cloud Backup Agent">install the Cloud Backup agent<i class="rs-icon-external"></i></a></span></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.lastBackupItem = function(opt_data, opt_ignored) {
+  return '<div><!-- ko if: hasBackupConfiguration() --><span data-bind="text: mostRecentBackup"></span><span class="details-divider"></span><a href="' + soy.$$filterNoAutoescape(opt_data.cloudBackupLink) + '" data-metric-element-id="Manage Cloud Backups">Manage Backups</a></span><!-- /ko --><!-- ko if: !hasBackupConfiguration() --><span class="confirmation-inline"><i class="confirmation-indicator warning-confirmation-indicator"></i>No backups configured. <a href="' + soy.$$filterNoAutoescape(opt_data.cloudBackupConfigurationKcLink) + '" target="_blank" data-metric-element-id="Create a Backup">Create a backup<i class="rs-icon-external"></i></a></span><!-- /ko --></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.checkIndicator = function(opt_data, opt_ignored) {
+  return '<div class="check-container" data-bind="visible: checks().length !== 0, css: { \'one-row\': checks().length > 0 && checks().length <= 5, \'two-rows\': checks().length > 5 }, foreach: checks"><div class="check-status-container" data-bind="css: { \'top-row\': $index() < 5, \'bottom-row\': $index() >= 5 }"><div class="check-status" data-bind="class: statusClass, attr: {\'data_check_id\': check_id}"></div></div></div><div class="check-container" data-bind="visible: checks().length === 0"><div class="no-checks" data-bind="click: addCreateCheckPopover, css: {disabled: !canCreateCheck}" /></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.empty_volume_overlay = function(opt_data, opt_ignored) {
+  return 'Expand storage capacity without upgrading your server. Learn more about <a href="' + soy.$$escapeHtml(opt_data.productUrl) + '" target="_blank">Cloud Block Storage.<i class="rs-icon-external"></i></a>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.emptyOverlay = function(opt_data, opt_ignored) {
+  return 'Cloud infrastructure built on open source technology. Learn more about <a href="' + soy.$$escapeHtml(opt_data.productUrl) + '" target="_blank">Cloud Servers.<i class="rs-icon-external"></i></a>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.diskConfigKnowledgeCenterLink = function(opt_data, opt_ignored) {
+  return '<a href="http://www.rackspace.com/knowledge_center/article/understanding-and-using-automatic-and-manual-disk-partitioning-in-the-rackspace-cloud" target="_blank">More about Disk Configuration<i class="rs-icon-external"></i></a>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.newDiskConfigCreateDescription = function(opt_data, opt_ignored) {
+  return '<p>This new feature controls how your server is partitioned. Previously, all new servers were set to <strong>Automatic</strong> disk partitioning. Now, servers can be set to <strong>Manual</strong> which gives you faster build times and more control.</p>' + ck.templates.servers.diskConfigKnowledgeCenterLink(null);
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.autoDiskConfigCreateDescription = function(opt_data, opt_ignored) {
+  return '<p>Create server with one partition, expanded to the full size of the flavor selected. No additional user action required.</p>' + ck.templates.servers.diskConfigKnowledgeCenterLink(null);
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.manualDiskConfigCreateDescription = function(opt_data, opt_ignored) {
+  return '<p>For faster build times, create server with a partition only for the operating system, leaving the remainder of the disk unpartitioned. You will have to partition for more disk space once the partition is full.</p>' + ck.templates.servers.diskConfigKnowledgeCenterLink(null);
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.noImageSelectedDescription = function(opt_data, opt_ignored) {
+  return '<p>Please select an image.</p>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.imageWithNoDiskConfigDescription = function(opt_data, opt_ignored) {
+  return '<p class="advanced-create-options-tooltip">The image you have selected is not compatible with advanced disk configuration. Please choose another image to enable this feature.</p>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.flavorWithNoDiskConfigDescription = function(opt_data, opt_ignored) {
+  return '<p class="advanced-create-options-tooltip">The flavor you have selected has separate system & data disks and will be automatically partitioned.</p>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.automaticDiskConfigDescription = function(opt_data, opt_ignored) {
+  return '<p>The disk with the operating system is currently partitioned to expand automatically to the full size of the selected flavor.</p><p>To change to manual partitioning, you have to rebuild the server.</p>' + ck.templates.servers.diskConfigKnowledgeCenterLink(null);
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.manualDiskConfigDescription = function(opt_data, opt_ignored) {
+  return '<p>The disk with the operating system is partitioned to the minimum size needed for the OS. Once the disk is full, you will have to manually add more space to the partition.</p><p>To change to automatic partitioning, you have to rebuild the server.</p>' + ck.templates.servers.diskConfigKnowledgeCenterLink(null);
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.sshKeynameDescription = function(opt_data, opt_ignored) {
+  return '<p>Initial SSH key authorized for the root user.</p>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.flavorSelector = function(opt_data, opt_ignored) {
+  return '<div class="flavor-selector"><div class="flavor-slider-container"></div><div class="flavor-description-container"></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.flavorPanel = function(opt_data, opt_ignored) {
+  return '<div class="flavor-panel"><div class="flavor-panel-header"><div class="flavor-panel-flavor-class">Flavor Class</div><div class="flavor-panel-flavor">Flavor</div><div class="flavor-panel-description"><span class="flavor-panel-description-text">Description</span></div></div><div class="flavor-panel-body"></div><div class="flavor-panel-loading-overlay"></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.flavorDescription = function(opt_data, opt_ignored) {
+  return '<div class="flavor-description"><div class="flavor-description-body"><div class="flavor-header"><span class="section_title" data-bind="text: flavorName"></span></div><div class="flavor-class-description" data-bind="text: flavorDescription"></div>' + ck.templates.servers.flavorDescriptionDetails(null) + '<div class="flavor-graph"></div></div><div class="flavor-description-unselectable-overlay">No server flavor selected</div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.flavorDetailsDescription = function(opt_data, opt_ignored) {
+  return '<span data-bind="text: flavorDetailsDescription"></span>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.flavorDescriptionDetails = function(opt_data, opt_ignored) {
+  return '<div class="flavor-info"><div class="flavor-info-pair"><div class="flavor-info-key"><span id="flavor-info-cpu" data-bind="tooltip: cpuTooltip">CPU</span></div><div class="flavor-info-value" id="flavor-info-cpu-value" data-bind="text: flavorCpu"></div></div><div class="flavor-info-pair"><div class="flavor-info-key"><span id="flavor-info-ram" data-bind="tooltip: ramTooltip">RAM</span></div><div class="flavor-info-value" id="flavor-info-ram-value" data-bind="text: flavorRam"></div></div><div class="flavor-info-pair"><div class="flavor-info-key"><span id="flavor-info-disk" data-bind="tooltip: systemDiskTooltip">System Disk</span></div><div class="flavor-info-value" id="flavor-info-disk-value" data-bind="text: flavorDisk"></div></div><div class="flavor-info-pair" data-bind="visible: flavorHasDataDisks"><div class="flavor-info-key"><span id="flavor-info-data-disk" data-bind="tooltip: dataDiskTooltip">Data Disk</span></div><div class="flavor-info-value" id="flavor-info-data-disk-value" data-bind="text: flavorDataDisk"></div></div><div class="flavor-info-pair flavor-info-network-pair"><div class="flavor-info-key"><span id="flavor-info-rxtx" data-bind="tooltip: networkTooltip">Network</span></div><div class="flavor-info-value" id="flavor-info-rxtx-value" data-bind="text: flavorRxtx"></div></div><div class="flavor-info-pair flavor-info-io-pair" data-bind="visible: flavorDisplaysIo"><div class="flavor-info-key"><span id="flavor-info-io" data-bind="tooltip: ioTooltip">Disk I/O</span></div><div class="flavor-info-value" id="flavor-info-io-value" data-bind="text: flavorDiskIo"></div></div><div class="flavor-info-pair"><div class="flavor-info-key"><span class="flavor-info-price"><span class="flavor-info-label">Price</span></span></div><div class="flavor-info-value" id="flavor-info-price-value" data-bind="text: flavorPrice, css: {\'unavailable-flavor-price\': flavorPriceIsUnavailable}"></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.flavorDetails = function(opt_data, opt_ignored) {
+  return '<div class="flavor-info"><div class="flavor-info-pair"><div class="flavor-info-key"><span id="flavor-info-cpu">CPU</span></div><div class="flavor-info-value" id="flavor-info-cpu-value" data-bind="text: flavorCpu"></div></div><div class="flavor-info-pair"><div class="flavor-info-key"><span id="flavor-info-ram">RAM</span></div><div class="flavor-info-value" id="flavor-info-ram-value" data-bind="text: flavorRam"></div></div><div class="flavor-info-pair"><div class="flavor-info-key"><span id="flavor-info-disk">System Disk</span></div><div class="flavor-info-value" id="flavor-info-disk-value" data-bind="text: flavorDisk"></div></div><div class="flavor-info-pair" data-bind="visible: flavorHasDataDisks"><div class="flavor-info-key"><span id="flavor-info-data-disk">Data Disk</span></div><div class="flavor-info-value" id="flavor-info-data-disk-value" data-bind="text: flavorDataDisk"></div></div><div class="flavor-info-pair flavor-info-network-pair"><div class="flavor-info-key"><span id="flavor-info-rxtx">Network</span></div><div class="flavor-info-value" id="flavor-info-rxtx-value" data-bind="text: flavorRxtx"></div></div><div class="flavor-info-pair flavor-info-io-pair"><div class="flavor-info-key"><span id="flavor-info-io">Disk I/O</span></div><div class="flavor-info-value" id="flavor-info-io-value" data-bind="text: flavorDiskIo"></div></div><div class="flavor-info-pair"><div class="flavor-info-key"><span id="flavor-info-price"><span class="flavor-info-label">Price</span></span></div><div class="flavor-info-value" id="flavor-info-price-value" data-bind="text: flavorPrice, css: {\'unavailable-flavor-price\': flavorPriceIsUnavailable}"></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.flavorSection = function(opt_data, opt_ignored) {
+  return '<section class="create_section flavor-section"><header class="section_header"><h2 class="section_title">Flavor</h2></header><div id="flavor-list"></div><div class="table-validator"data-bind="validationMessage: flavorId"></div></section>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.sshSection = function(opt_data, opt_ignored) {
+  return '<div id="create-server-ssh-section" class="create_section rs-detail-section"><div class="section_header collapsible-trigger"><div class="rs-detail-section-title">SSH Key</div><div class="ssh-new-icon left-new-icon" data-bind="tooltip: sshNewTooltip"></div><div class="collapsible-toggle"></div><div class="header-summary"><!-- ko ifnot: isEnabled() -->Not compatible with selected settings<!-- /ko --></div></div><div class="collapsible-content" data-bind="tooltip: disabledTooltip"><div class="ssh-key-selector"></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.sshSelector = function(opt_data, opt_ignored) {
+  return '<div><div data-bind="css: {\'field-loading\': loadingSshKeys() }, visible: !errorLoading()"><select id="select-ssh-key-dropdown" data-bind="value: selectedSshKey, options: sshKeysList, optionsCaption: emptyItem, attr: { disabled: !isEnabled() }" class="rs-input-large"></select><span id="ssh-keys-select-link"><a data-bind="visible: hasSshKeys(), css: { disabled: !isEnabled() }, attr: { href: sshSectionUrl() }" class="rs-btn rs-btn-link">Manage SSH Keys &raquo;</a><button class="rs-btn rs-btn-link" data-bind="visible: !hasSshKeys(), css: { disabled: !isEnabled() }" id="add-ssh-key-link">Add Public Key&hellip;</button></span></div><div class="field-error-overlay" data-bind="visible: errorLoading()">' + ck.templates.common.inlineErrorMessage({message: 'Unable to load ssh keys.'}) + '</div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.sshNewTooltip = function(opt_data, opt_ignored) {
+  return '<p>Using SSH Keys to connect to your server offers more security and flexibility than a password.&nbsp;<a href="https://help.github.com/articles/generating-ssh-keys" target="_blank">More about SSH Keys<i class="rs-icon-external"></i></a></p>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.reachedApiLimit = function(opt_data, opt_ignored) {
+  return 'You\'ve reached an API limit.  Please contact support.';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.virtualServersContainer = function(opt_data, opt_ignored) {
+  return '<div id="virtual-servers-container" class="virtual-servers-container"></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.metalServersContainer = function(opt_data, opt_ignored) {
+  return '<div id="metal-servers-container"><div class="details-section-description">OnMetal servers are single tenant with no hypervisor.</div><div class="metal-servers-container-body"></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.metalServersInfoBlurb = function(opt_data, opt_ignored) {
+  return '<div id="metal-servers-info-blurb" class="section-info-blurb"><ul class="metal-info-blurb-list"><li class="metal-info-blurb-content"><div class="metal-info-title">No Hypervisor</div><div class="metal-info-subtitle incidental-content">Peak performance without barriers</div></li><li class="metal-info-blurb-content"><div class="metal-info-title">Single Tenant</div><div class="metal-info-subtitle incidental-content">Your own server - No resource sharing</div></li></ul></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.pvhvmTooltip = function(opt_data, opt_ignored) {
+  return '<div><p> Virtualization mode that offers faster network and disk IO. </p><a href="http://www.rackspace.com/knowledge_center/article/choosing-a-virtualization-mode-pv-versus-pvhvm" target="_blank">Learn more about PVHVM<i class="rs-icon-external"></i></a></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.servers.name_tooltip = function(opt_data, opt_ignored) {
+  return '<div><p>This will be your server\'s initial hostname. Editing the name in the Control Panel will not change the hostname.&nbsp;<a href="http://www.rackspace.com/knowledge_center/frequently-asked-question/what-do-i-enter-into-the-server-name-field" target="_blank">More details<i class="rs-icon-external"></i></a></p></div>';
+};
