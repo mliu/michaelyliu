@@ -184,4 +184,8 @@ header h1 small{
     position:absolute;
     top:0;
   }
+
+  .about-block {
+    width: 100%;
+  }
 }
