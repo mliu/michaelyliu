@@ -1,8 +1,0 @@
-{
-  "name": "server",
-  "version": "0.0.1",
-  "dependencies": {
-    "express": "4.x.x",
-    "jquery": "2.x.x"
-  }
-}
