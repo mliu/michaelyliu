@@ -1,0 +1,206 @@
+// This file was automatically generated from common.soy.
+// Please don't edit this file by hand.
+
+goog.provide('ck.templates.common');
+
+goog.require('soy');
+goog.require('soydata');
+goog.require('ck.templates.controls');
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.linkButton = function(opt_data, opt_ignored) {
+  return '<button class="rs-btn rs-btn-link" type="button">' + soy.$$escapeHtml(opt_data.text) + '</button>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.tableOverlay = function(opt_data, opt_ignored) {
+  return '<div class="ck-overlay"><div class="ck-table-overlay-title"></div><div class="ck-table-overlay-subtitle"></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.create_one_now = function(opt_data, opt_ignored) {
+  return '<div class=\'create_one_now_section\'><div><div class=\'create_one_message\'><div><p class="create_one_message_top top"></p></div><div><p class="create_one_message_middle middle"></p></div><div><p class="create_one_message_description description"></p></div></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.create_one_now_with_arrow = function(opt_data, opt_ignored) {
+  return '<div class="create_one_now_arrow"></div><div class="create_one_now_section"><div><div class="create_one_message"><div><p class="create_one_message_top top"></p></div><div><p class="create_one_message_middle middle"></p></div><div><p class="create_one_message_description description"></p></div></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.no_search_results = function(opt_data, opt_ignored) {
+  return '<div class="no_search_results_section"><div><div class="no_search_results"><p class="top"></p><p class="description"></p></div></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.confirmation_popover = function(opt_data, opt_ignored) {
+  return '<div class="confirmation-popover"><section><form><p class="instruction"' + ((opt_data.shouldBindInstruction) ? ' data-bind="text: instruction" ' : '') + '>' + soy.$$filterNoAutoescape(opt_data.labels.instruction) + ((opt_data.labels.tooltip) ? '<span class="tooltip_toggle"></span>' : '') + '</p></form><!-- ko if: $data.warnings --><div class="warnings" data-bind="foreach: warnings"><div class="warning_message" data-bind="html: $data"></div></div><!-- /ko --></section><div class="save-cancel">' + ck.templates.controls.panel(opt_data) + '</div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.message_popover = function(opt_data, opt_ignored) {
+  return '<div class="message_popover"><p class="message">' + soy.$$escapeHtml(opt_data.labels.message) + '</p></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.ok_popover = function(opt_data, opt_ignored) {
+  return '<div class="ok_popover"><p class="message">' + soy.$$filterNoAutoescape(opt_data.labels.message) + '</p><div class="close_container"><button class="close">' + soy.$$escapeHtml(opt_data.labels.close) + '</button></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.sectionWarningMessage = function(opt_data, opt_ignored) {
+  return '<div class="ck-message ck-message-warning ck-message-section ' + ((opt_data.message_class) ? soy.$$escapeHtml(opt_data.message_class) : '') + '"><p class="ck-message-paragraph"><strong>' + soy.$$escapeHtml(opt_data.warning) + ': </strong>' + soy.$$filterNoAutoescape(opt_data.message) + '</p></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.sectionErrorMessage = function(opt_data, opt_ignored) {
+  return '<div class="ck-message ck-message-error ck-message-section ' + ((opt_data.message_class) ? soy.$$escapeHtml(opt_data.message_class) : '') + '"><p class="ck-message-paragraph">' + soy.$$filterNoAutoescape(opt_data.message) + '</p></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.blockInfoMessage = function(opt_data, opt_ignored) {
+  return '<div class="ck-message ck-message-block ' + ((opt_data.message_class) ? soy.$$escapeHtml(opt_data.message_class) : '') + '"><p class="ck-message-paragraph"><strong>' + soy.$$escapeHtml(opt_data.note) + ': </strong>' + soy.$$filterNoAutoescape(opt_data.message) + '</p></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.blockWarningMessage = function(opt_data, opt_ignored) {
+  return '<div class="ck-message ck-message-warning ck-message-block ' + ((opt_data.message_class) ? soy.$$escapeHtml(opt_data.message_class) : '') + '"><p class="ck-message-paragraph"><strong>' + soy.$$escapeHtml(opt_data.warning) + ': </strong>' + soy.$$filterNoAutoescape(opt_data.message) + '</p></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.blockErrorMessage = function(opt_data, opt_ignored) {
+  return '<div class="ck-message ck-message-error ck-message-block ' + ((opt_data.message_class) ? soy.$$escapeHtml(opt_data.message_class) : '') + '"><p class="ck-message-paragraph">' + soy.$$filterNoAutoescape(opt_data.message) + '</p></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.inlineErrorMessage = function(opt_data, opt_ignored) {
+  return '<span class="ck-message-error"><p class="ck-message-paragraph">' + soy.$$filterNoAutoescape(opt_data.message) + '</p></span>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.appWarning = function(opt_data, opt_ignored) {
+  return '<div class="ck-app-warning"><span class="icon_alert_red"></span><span class="ck-app-warning-header alert-text">' + soy.$$escapeHtml(opt_data.header) + ':</span> ' + soy.$$filterNoAutoescape(opt_data.message) + '</div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.appMessage = function(opt_data, opt_ignored) {
+  return '<div class="ck-app-warning"><span class="ck-app-warning-header">' + soy.$$filterNoAutoescape(opt_data.header) + '</span> ' + soy.$$filterNoAutoescape(opt_data.message) + '</div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.ckSlider = function(opt_data, opt_ignored) {
+  return '<div class="ck-slider"><div class="ck-slider-plus"></div><div class="ck-slider-container"><div class="ck-slider-bar"><div class="ck-slider-line"></div></div><div class="ck-slider-pointer"></div></div><div class="ck-slider-minus"></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.common.ckSliderStep = function(opt_data, opt_ignored) {
+  return '<div class="ck-slider-step" style="top: ' + soy.$$escapeHtml(opt_data.top) + 'px"></div>';
+};

@@ -1,0 +1,52 @@
+// This file was automatically generated from popover.soy.
+// Please don't edit this file by hand.
+
+goog.provide('ck.templates.Popover');
+
+goog.require('soy');
+goog.require('soydata');
+goog.require('ck.templates.controls');
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.Popover.wrapper = function(opt_data, opt_ignored) {
+  return '<div class="' + soy.$$escapeHtml(opt_data.classes.base) + '"><div class="' + soy.$$escapeHtml(opt_data.classes.frame) + '"><div class="' + soy.$$escapeHtml(opt_data.classes.outer) + '"><div class="' + soy.$$escapeHtml(opt_data.classes.pointer) + '"></div><div class="' + soy.$$escapeHtml(opt_data.classes.content) + '"></div><div class="' + soy.$$escapeHtml(opt_data.classes.loading) + '"></div></div></div><div class="' + soy.$$escapeHtml(opt_data.classes.background) + '"></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.Popover.batchAction = function(opt_data, opt_ignored) {
+  return '<div class="batch-action-content" data-bind="css: { \'batch-action-initiated\': initiated, \'batch-action-success\': success }"><section><p id="batch-action-message" class="message" data-bind="html: description"></p><div id="batch-action-table"></div></section><section data-bind="visible: message"><p class="warning-text-paragraph" data-bind="text: message"></p></section><div class="save-cancel">' + ck.templates.controls.panel(opt_data) + '</div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.Popover.advancedSection = function(opt_data, opt_ignored) {
+  return '<div class="advanced"><button class="advanced-toggle" ' + ((opt_data.optionalElement) ? 'data-metric-element-id="' + soy.$$escapeHtml(opt_data.optionalElement) + '"' : '') + '>Advanced Options</button><div class="advanced-content"></div></div>';
+};
+
+
+/**
+ * @param {Object.<string, *>=} opt_data
+ * @param {(null|undefined)=} opt_ignored
+ * @return {string}
+ * @notypecheck
+ */
+ck.templates.Popover.inlineDeletion = function(opt_data, opt_ignored) {
+  return '<div class="data_table"><div class="data_table_header"><div class="data_table_row"><div class="data_table_cell header">' + soy.$$escapeHtml(opt_data.header) + '</div></div></div><div class="data_table_body" data-bind="foreach: { data: models }, visible: models().length > 0"><div class="data_table_row" data-bind="attr: { \'data-model_id\': id() }"><div class="data_table_cell value" data-bind="text: value"></div><div class="data_table_cell remove"><button class="button-remove icon_circle_subtract" data-bind="css: { \'button-loading\': loading() }, disable: $parent.removeItemButtonDisable() || loading(), click: remove, attr: { title: $parent.removeItemButtonTooltip() }"></button></div></div></div><div class="empty_overlay_widget" style="" data-bind="visible: models().length === 0"><div class="create_one_now_section"><div class="create_one_message"><div><p class="create_one_message_top">' + soy.$$escapeHtml(opt_data.emptyCollectionMessage) + '</p></div></div></div></div></div><div class="message_container error" data-bind="visible: errors().length > 0"><div class="message" data-bind="text: errors()"></div></div>';
+};
