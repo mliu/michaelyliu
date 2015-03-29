@@ -58,7 +58,7 @@ header h1 small{
   opacity:0;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1260px){
   .about-image{
     display:none;
   }
@@ -183,5 +183,9 @@ header h1 small{
     display:block;
     position:absolute;
     top:0;
+  }
+
+  .about-block{
+    width: 95% !important;
   }
 }
