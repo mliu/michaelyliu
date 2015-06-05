@@ -15,8 +15,13 @@ $(document).ready(function(){
     }
   }, 100);
 
+  $("a").click(function() {
+    ga('send', 'event', 'link', 'click', $(this).attr('href'));
+  });
+
   $(".nav-item").click(function(){
     var data = $(".selected").data("modal-bind");
+    ga('send', 'event', 'desktop_nav', 'click', data);
     $(".selected").removeClass("selected");
     $("body").find("[data-m-modal-bind='" + data + "']").removeClass("mobile-selected");
     $("body").find("[data-modal='" + data + "']").removeClass("visible");
@@ -30,6 +35,7 @@ $(document).ready(function(){
 
   $(".mobile-nav-item").click(function(){
     var data = $(".mobile-selected").data("m-modal-bind");
+    ga('send', 'event', 'mobile_nav', 'click', data);
     $(".mobile-selected").removeClass("mobile-selected");
     $("body").find("[data-modal-bind='" + data + "']").removeClass("selected");
     $("body").find("[data-modal='" + data + "']").removeClass("visible");
