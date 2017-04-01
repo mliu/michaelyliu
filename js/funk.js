@@ -20,7 +20,7 @@
   var speedSuccessTickCounts = 0;
 
   function init() {
-    setTagline();
+    // setTagline();
     canvas = $("#canvas");
 
     window.onresize();

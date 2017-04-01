@@ -7,7 +7,7 @@ body {
 .card {
   max-width: 500px;
   margin: 100px;
-  padding: 0px 30px 30px;
+  padding: 0px 30px 20px;
   border: 1px solid #555;
   border-top: 5px solid #336699;
   background: #fff;
@@ -23,7 +23,8 @@ body {
 header h1 {
   font-size: 3em;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 ul.links {
